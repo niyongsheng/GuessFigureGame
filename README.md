@@ -5,18 +5,22 @@
 [![](http://img.shields.io/travis/CocoaPods/CocoaPods/master.svg?style=flat)](https://travis-ci.org/CocoaPods/NYSMC)
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/niyongsheng/GuessFigure/blob/master/LICENS)
 ===
-* 猜图应用的实例
+* 猜图类应用的实例
 * An example of Guess Figure application.
 
 ## <a id="How_About_It:"></a>
 * Manual import：
-    * 核心动画
-    * 音效播放
+    * 核心动画 CoreAnimation
+    * 音效播放 AudioToolbox
 
 ## <a id="Application_Instance:"></a>Application Instance:
-RMOV | Screenshot | Screenshot | Screenshot | Screenshot
------------- | ------------- | ------------- | ------------- | -------------
-<img src="https://github.com/niyongsheng/GuessFigure/blob/master/ScreenRecording.mov?raw=true" width="310" height="550"> | <img src="https://github.com/niyongsheng/GuessFigure/blob/master/Screenshot/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-11-16%20at%2013.05.42.png?raw=true"> | <img src="https://github.com/niyongsheng/GuessFigure/blob/master/Screenshot/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-11-16%20at%2013.05.55.png?raw=true"> | <img src="https://github.com/niyongsheng/GuessFigure/blob/master/Screenshot/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-11-16%20at%2013.06.57.png?raw=true"> | <img src="https://github.com/niyongsheng/GuessFigure/blob/master/Screenshot/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-11-16%20at%2013.07.13.png?raw=true">
+RMOV | Screenshot
+------------ | -------------
+<img src="https://github.com/niyongsheng/GuessFigure/blob/master/ScreenRecording.mov?raw=true" width="310" height="550"> | <img src="https://github.com/niyongsheng/GuessFigure/blob/master/Screenshot/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-11-16%20at%2013.05.42.png?raw=true"> 
+
+Screenshot1 | Screenshot2 | Screenshot3 | Screenshot4
+------------ | ------------- | ------------- | -------------
+<img src="https://github.com/niyongsheng/GuessFigure/blob/master/Screenshot/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-11-16%20at%2013.05.42.png?raw=true"> | <img src="https://github.com/niyongsheng/GuessFigure/blob/master/Screenshot/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-11-16%20at%2013.05.55.png?raw=true"> | <img src="https://github.com/niyongsheng/GuessFigure/blob/master/Screenshot/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-11-16%20at%2013.06.57.png?raw=true"> | <img src="https://github.com/niyongsheng/GuessFigure/blob/master/Screenshot/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-11-16%20at%2013.07.13.png?raw=true">
 
 ## <a id="Config_Your_App:"></a>Config Your App:
 
