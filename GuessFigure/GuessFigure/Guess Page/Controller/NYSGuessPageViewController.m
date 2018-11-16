@@ -36,6 +36,8 @@
 @property (nonatomic, strong) NSMutableArray *questions;
 /** 题目索引 */
 @property (nonatomic, assign) NSInteger index;
+/** 分数 */
+@property (nonatomic, assign) NSInteger scores;
 @property (nonatomic, strong) UILabel *label;
 
 @end
@@ -45,14 +47,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // KVO
-    [self addObserver:self forKeyPath:@"index" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
+    // KVO监听分数
+    [self addObserver:self forKeyPath:@"scores" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
     
     // 截屏动画使用
     UILabel *label = [[UILabel alloc] initWithFrame:self.view.bounds];
     label.backgroundColor = [UIColor whiteColor];
     label.alpha = 1.0;
     self.label = label;
+    self.scores = [self.scoreBtn titleForState:UIControlStateNormal].intValue;
     
     // 索引默该为-1，app默认image设置成模型里第一张image
     self.index = -1;
@@ -61,9 +64,17 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
     // 判断是否为self.myKVO的属性“num”:
-    if([keyPath isEqualToString:@"index"] && object == self) {
+    if([keyPath isEqualToString:@"scores"] && object == self) {
         // 响应变化处理：UI更新
-        
+        [self.scoreBtn setTitle:[NSString stringWithFormat:@"%ld",self.scores] forState:UIControlStateNormal];
+        if (self.scores <= 0) {
+            WS(weakSelf);
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示📌" message:@"你的积分输光了，请重新开始！" preferredStyle:UIAlertControllerStyleAlert];
+            [self presentViewController:alert animated:YES completion:nil];
+            [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                [weakSelf back];
+            }]];
+        }
         NSLog(@"\\noldnum:%@ newnum:%@",
               [change valueForKey:@"old"],
               [change valueForKey:@"new"]);
@@ -72,7 +83,7 @@
 
 - (void)dealloc {
     /* 移除KVO */
-    [self removeObserver:self forKeyPath:@"index" context:nil];
+    [self removeObserver:self forKeyPath:@"scores" context:nil];
 }
 
 // 题目的懒加载
@@ -97,8 +108,9 @@
         [self presentViewController:alert animated:YES completion:nil];
         
         // 监听确定按钮点击
+        WS(weakSelf);
         [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-            NSLog(@"点击了确定按钮-------");
+            [weakSelf back];
         }]];
         
         return;
@@ -127,7 +139,7 @@
  */
 - (void)settingData:(NYSQuestionModel *)question
 {
-    // 3.1设置序号
+    // 3.1设置序%lu
     self.UILabel.text = [NSString stringWithFormat:@"%ld/%ld", self.index + 1, self.questions.count];
     
     // 3.2设置标题
@@ -262,7 +274,7 @@
                            options:UIViewAnimationOptionTransitionFlipFromBottom
                         animations:^ { [weakSelf.optionView addSubview:optionBtn]; }
                         completion:nil];
-//        [self btnRotate:optionBtn];
+        //        [self btnRotate:optionBtn];
         [self shakeToShow:optionBtn];
         
         // 6.2.6监听点击答案备选项
@@ -284,7 +296,7 @@
 - (void)shakeToShow:(UIButton *)button {
     CAKeyframeAnimation* animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
     animation.duration = .5f;
-
+    
     NSMutableArray *values = [NSMutableArray array];
     [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.1, 0.1, 1.0)]];
     [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.2, 1.2, 1.0)]];
@@ -384,7 +396,7 @@
         NYSQuestionModel *question = self.questions[self.index];
         
         if ([tempAnswerTitle isEqualToString:question.answer]) { // 答对了
-             [NYSHelp playButtonEventWithFileName:@"luo"];
+            [NYSHelp playButtonEventWithFileName:@"luo"];
             NSLog(@"正确");
             // 显示文字为绿色
             for (UIButton *answerBtn in self.answerView.subviews) {
@@ -392,9 +404,7 @@
             }
             
             // 加分
-            int score = [self.scoreBtn titleForState:UIControlStateNormal].intValue;
-            score += 500;
-            [self.scoreBtn setTitle:[NSString stringWithFormat:@"%d",score] forState:UIControlStateNormal];
+            self.scores += 500;
             
             // 延时一秒进入下一题
             [self performSelector:@selector(nextQuestion:) withObject:nil afterDelay:0.5];
@@ -448,9 +458,7 @@
     }
     
     // 3.减分
-    int score = [self.scoreBtn titleForState:UIControlStateNormal].intValue;
-    score -= 1000;
-    [self.scoreBtn setTitle:[NSString stringWithFormat:@"%d", score] forState:UIControlStateNormal];
+    self.scores -= 1000;
 }
 
 - (IBAction)help:(id)sender {
@@ -469,13 +477,13 @@
     
     UIGraphicsBeginImageContext(self.view.bounds.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
-//    AppDelegate * app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    //    AppDelegate * app = (AppDelegate *)[UIApplication sharedApplication].delegate;
     [self.view.layer renderInContext:context];
     UIImage * shareImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     NSString *shareText = @"帮助";
-//    NSURL *shareURL = [NSURL URLWithString:@"https://www.baidu.com/"];
+    //    NSURL *shareURL = [NSURL URLWithString:@"https://www.baidu.com/"];
     NSArray *activityItems = [[NSArray alloc] initWithObjects:shareText, shareImage, nil];
     
     UIActivityViewController *vc = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
