@@ -10,8 +10,8 @@
 
 ## <a id="How_About_It:"></a>How About It:
 * Framework import：
-    * 核心动画 CoreAnimation
-    * 音效播放 AudioToolbox
+    * 核心动画 'CoreAnimation'
+    * 音效播放 'AudioToolbox'
 
 ## <a id="Application_Instance:"></a>Application Instance:
 ![(RMOV)](https://github.com/niyongsheng/GuessFigure/blob/master/ScreenRecording.mov?raw=true)
