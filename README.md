@@ -1,10 +1,9 @@
 ![(logo)](https://github.com/niyongsheng/GuessFigure/blob/master/logo.png?raw=true)
-# GuessFigure
-===
+# <a id="GuessFigure"></a>
+
 [![](https://img.shields.io/badge/platform-iOS-orange.svg)](https://developer.apple.com/ios/)
 [![](http://img.shields.io/travis/CocoaPods/CocoaPods/master.svg?style=flat)](https://travis-ci.org/CocoaPods/NYSMC)
-[![](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/niyongsheng/GuessFigure/blob/master/LICENSE)
-===
+[![](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/niyongsheng/GuessFigure/blob/master/LICENS
 * 猜图应用的实例
 * An example of Guess Figure application.
 
