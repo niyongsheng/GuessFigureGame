@@ -14,7 +14,7 @@
     * 音效播放 AudioToolbox
 
 ## <a id="Application_Instance:"></a>Application Instance:
-RMOV | Screenshot
+RMOV | 
 ------------ | -------------
 <img src="https://github.com/niyongsheng/GuessFigure/blob/master/ScreenRecording.mov?raw=true" width="310" height="550"> | 
 
