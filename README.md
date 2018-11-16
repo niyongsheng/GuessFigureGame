@@ -16,7 +16,7 @@
 ## <a id="Application_Instance:"></a>Application Instance:
 RMOV | Screenshot
 ------------ | -------------
-<img src="https://github.com/niyongsheng/GuessFigure/blob/master/ScreenRecording.mov?raw=true" width="310" height="550"> | <img src="https://github.com/niyongsheng/GuessFigure/blob/master/Screenshot/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-11-16%20at%2013.05.42.png?raw=true"> 
+<img src="https://github.com/niyongsheng/GuessFigure/blob/master/ScreenRecording.mov?raw=true" width="310" height="550"> | 
 
 Screenshot1 | Screenshot2 | Screenshot3 | Screenshot4
 ------------ | ------------- | ------------- | -------------
