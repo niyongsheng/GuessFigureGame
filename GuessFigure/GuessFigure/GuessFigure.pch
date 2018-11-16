@@ -1,0 +1,61 @@
+//
+//  CrazyGuessFigure.pch
+//  CrazyGuessFigure
+//
+//  Created by 倪永胜 on 2018/10/31.
+//  Copyright © 2018 NiYongsheng. All rights reserved.
+//
+
+#ifndef CrazyGuessFigure_pch
+#define CrazyGuessFigure_pch
+
+// JPush
+#define JPUSH_ISPRODCTION YES
+#define JPUSH_APPKEY @"303a090bfacbe1f913df0511"
+// App Store ID
+#define APPID @"1441514530"
+// App Store详情页
+#define AppStoreURL @"https://itunes.apple.com/cn/app/id1441514530"
+// 用户隐私协议
+#define UserProtocolURL @"http://guess.qmook.com/"
+
+#define BundleId [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"]
+
+#define WS(weakSelf) __weak __typeof(&*self)weakSelf = self;
+
+// 1.包含UIimage分类（文件名拼接、自由拉伸）
+#import <AFNetworking.h>
+#import <MJExtension.h>
+#import <SVProgressHUD.h>
+#import "NYSHelp.h"
+
+// 2.屏幕尺寸
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+
+// 3.获得RGB颜色
+#define RGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define RandomColor [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1.0]
+
+// 4.获取导航栏高度
+#define getRectNavHight \
+({\
+CGRect rectNav = self.navigationController.navigationBar.frame;\
+(rectNav.size.height);\
+})\
+
+// 5.获取状态栏的高度
+#define getRectStatusHight \
+({\
+CGRect rectStatus = [[UIApplication sharedApplication] statusBarFrame];\
+( rectStatus.size.height);\
+})\
+
+// 6.打印出类名,方法名,行数
+#ifdef DEBUG
+#define NLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define NLog(...)
+#endif
+
+#endif

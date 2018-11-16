@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "1/10"; ObjectID = "05i-KS-xRa"; */
+"05i-KS-xRa.text" = "1/10";
+
+/* Class = "UIButton"; normalTitle = "下一题"; ObjectID = "0Nt-ks-u6X"; */
+"0Nt-ks-u6X.normalTitle" = "下一题";
+
+/* Class = "UILabel"; text = "Question Title"; ObjectID = "ROt-Pb-VnY"; */
+"ROt-Pb-VnY.text" = "Question Title";
+
+/* Class = "UIButton"; normalTitle = "提示"; ObjectID = "ZAH-kA-O3X"; */
+"ZAH-kA-O3X.normalTitle" = "提示";
+
+/* Class = "UIButton"; normalTitle = "1000"; ObjectID = "nMl-F5-sPd"; */
+"nMl-F5-sPd.normalTitle" = "1000";
+
+/* Class = "UIButton"; normalTitle = "求助"; ObjectID = "yrg-SA-FHX"; */
+"yrg-SA-FHX.normalTitle" = "求助";
