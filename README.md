@@ -5,19 +5,19 @@ GuessFigure
 [![](http://img.shields.io/travis/CocoaPods/CocoaPods/master.svg?style=flat)](https://travis-ci.org/CocoaPods/NYSMC)
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/niyongsheng/GuessFigure/blob/master/LICENSE)
 ===
-* 疯狂彩图。
-* Quickly Create An Application.
+* 猜图应用的实例
+* An example of Guess Figure application.
 
-## <a id="How_to_use:"></a>How to use:
+## <a id="How_About_It:"></a>
 * Installation with CocoaPods：`pod 'NYSTK','~>0.0.1'`
 * Manual import：
     * Drag All files in the `NYSMC` folder to project
     * Import the main file：`#import <NYSTK/NYSTK.h>`
 
 ## <a id="Application_Instance:"></a>Application Instance:
-RMOV | CI | CI
------------- | ------------- | -------------
-<img src="https://github.com/niyongsheng/GuessFigure/blob/master/ScreenRecording.mov?raw=true" width="310" height="550"> | <img src="https://github.com/niyongsheng/GuessFigure/blob/master/Screenshot/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-11-16%20at%2013.05.42.png?raw=true" width="310" height="550"> | <img src="https://github.com/niyongsheng/GuessFigure/blob/master/Screenshot/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-11-16%20at%2013.05.55.png?raw=true" width="310" height="550">
+RMOV | Screenshot | Screenshot | Screenshot | Screenshot
+------------ | ------------- | ------------- | ------------- | -------------
+<img src="https://github.com/niyongsheng/GuessFigure/blob/master/ScreenRecording.mov?raw=true" width="310" height="500"> | <img src="https://github.com/niyongsheng/GuessFigure/blob/master/Screenshot/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-11-16%20at%2013.05.42.png?raw=true" width="310" height="500"> | <img src="https://github.com/niyongsheng/GuessFigure/blob/master/Screenshot/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-11-16%20at%2013.05.55.png?raw=true" width="310" height="500"> | <img src="https://github.com/niyongsheng/GuessFigure/blob/master/Screenshot/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-11-16%20at%2013.06.57.png?raw=true" width="310" height="500"> | <img src="https://github.com/niyongsheng/GuessFigure/blob/master/Screenshot/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-11-16%20at%2013.07.13.png?raw=true" width="310" height="500">
 
 ## <a id="Config_Your_App:"></a>Config Your App:
 ```shell
