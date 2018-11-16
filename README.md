@@ -5,8 +5,8 @@
 [![](http://img.shields.io/travis/CocoaPods/CocoaPods/master.svg?style=flat)](https://travis-ci.org/CocoaPods/NYSMC)
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/niyongsheng/GuessFigure/blob/master/LICENS)
 ===
-> * 猜图类应用的实例
-> * An example of Guess Figure application.
+> 猜图类应用的实例
+> An example of Guess Figure application.
 
 ## <a id="How_About_It:"></a>How About It:
 * Framework import：
