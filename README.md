@@ -8,8 +8,8 @@
 * 猜图类应用的实例
 * An example of Guess Figure application.
 
-## <a id="How_About_It:"></a>
-* Manual import：
+## <a id="How_About_It:"></a>How About It:
+* Framework import：
     * 核心动画 CoreAnimation
     * 音效播放 AudioToolbox
 
