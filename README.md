@@ -60,7 +60,7 @@ Bob-->Alice: I am good thanks!
 - [x] iPhone \ iPad
 
 ## Contribution
-Reward[:lollipop:](+8618853936112)  Encourage[:heart:](https://github.com/niyongsheng/GuessFigure/stargazers)
+Reward[:lollipop:](https://github.com/niyongsheng/niyongsheng.github.io/blob/master/Beg/README.md)  Encourage[:heart:](https://github.com/niyongsheng/GuessFigure/stargazers)
 
 ## Contact Me [:octocat:](https://niyongsheng.github.io)
 * E-mail: niyongsheng@Outlook.com
